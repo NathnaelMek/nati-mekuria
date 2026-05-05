@@ -36,6 +36,7 @@ a {
   max-width: 700px;
   margin: 0 auto;
   padding: 0 24px;
+  zoom: 1.5;
 }
 
 /* Nav */
@@ -321,6 +322,14 @@ li {
   font-size: 13px;
   color: var(--text-p);
   line-height: 1.5;
+} 
+
+.project-card-company {
+  font-size: 13px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  color: var(--link); /* bright accent color */
+  margin-top: 4px;
 }
 
 /* Project detail */

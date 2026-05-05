@@ -3,6 +3,7 @@ const projects = [
     id: "secure-usb-module",
     title: "Secure USB Option Module",
     category: "work",
+    company: "Dell Technologies",
     image: null,
     summary:
       "A hardware security module enabling USB port control and management for enterprise Dell systems.",
@@ -13,6 +14,7 @@ const projects = [
     id: "contextual-awareness-svt",
     title: "Contextual Awareness Project — SVT",
     category: "work",
+    company: "Dell Technologies",
     image: null,
     summary:
       "System validation testing for Dell's contextual awareness platform, covering hardware-software integration.",

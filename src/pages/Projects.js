@@ -19,6 +19,9 @@ function ProjectCard({ project }) {
       <div className="project-card-body">
         <h4>{project.title}</h4>
         <p>{project.summary}</p>
+        {project.category === "work" && project.company && (
+          <p className="project-card-company">{project.company}</p>
+        )}
       </div>
     </div>
   );

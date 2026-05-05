@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Resume() {
   return (
@@ -24,11 +25,31 @@ export default function Resume() {
           </div>
           <div className="entry-company">Dell Technologies</div>
           <ul>
-            <li>Secure USB Option Module — PCB design, schematic capture, and validation</li>
+            <li>
+              <Link to="/projects/secure-usb-module">Secure USB Option Module</Link> — PCB design, schematic capture, and validation
+            </li>
             <li>Contextual Awareness Project — System validation testing (SVT)</li>
             <li>Signal integrity analysis and power delivery optimization</li>
             <li>Cross-functional collaboration with firmware, mechanical, and manufacturing teams</li>
           </ul>
+        </div>
+      </div>
+
+      <div className="subsection">
+        <h3>Patents</h3>
+        <div className="entry">
+          <div className="entry-header">
+            <strong>
+              Inventor — <Link to="/projects/secure-usb-module">Secure USB</Link>
+            </strong>
+            <span className="entry-date">Pending (2 U.S. Applications)</span>
+          </div>
+          <p>Hardware/software system to control and secure USB device interactions at the system level.</p>
+          <p className="muted">
+            Publications:{" "}
+            <a href="https://patents.google.com/patent/US20250335642A1" target="_blank" rel="noreferrer">US 20250335642 A1</a>,{" "}
+            <a href="https://patents.google.com/patent/US20250390614A1" target="_blank" rel="noreferrer">US 20250390614 A1</a>
+          </p>
         </div>
       </div>
 
@@ -64,7 +85,7 @@ export default function Resume() {
           </div>
           <div>
             <h4>Other</h4>
-            <p>SI/PI, EMC/EMI, High-Speed Design, Capacitive Sensing, System Architecture, Vendor Communication</p>
+            <p>SI/PI, EMC/EMI, High-Speed Design, Soldering, Capacitive Sensing, System Architecture, Vendor Communication</p>
           </div>
         </div>
       </div>

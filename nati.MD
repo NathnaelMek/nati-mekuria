@@ -38,7 +38,7 @@ they Are still a work in progress. started them recently (may 2026)
 - **Simulation:** LTSPICE, MATLAB
 - **Lab Equipment:** Oscilloscopes, Logic Analyzers, VNAs, Spectrum Analyzers
 - **Programming:** Python, C/C++, VHDL/Verilog, MATLAB
-- **Other:** SI/PI, EMC/EMI, DFM/DFA, Highspeed design
+- **Other:** SI/PI, EMC/EMI, DFM/DFA, Highspeed design, Soldering
 
 ## Education
 - **Degree:** B.S. Computer Engineering,
