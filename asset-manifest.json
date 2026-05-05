@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/nati-mekuria/static/css/main.00d09963.css",
-    "main.js": "/nati-mekuria/static/js/main.5231065c.js",
+    "main.css": "/nati-mekuria/static/css/main.79583c0a.css",
+    "main.js": "/nati-mekuria/static/js/main.1226cd45.js",
     "static/media/headshot_linkedin.jpg": "/nati-mekuria/static/media/headshot_linkedin.e296bf3280963ba01f4a.jpg",
     "index.html": "/nati-mekuria/index.html",
-    "main.00d09963.css.map": "/nati-mekuria/static/css/main.00d09963.css.map",
-    "main.5231065c.js.map": "/nati-mekuria/static/js/main.5231065c.js.map"
+    "main.79583c0a.css.map": "/nati-mekuria/static/css/main.79583c0a.css.map",
+    "main.1226cd45.js.map": "/nati-mekuria/static/js/main.1226cd45.js.map"
   },
   "entrypoints": [
-    "static/css/main.00d09963.css",
-    "static/js/main.5231065c.js"
+    "static/css/main.79583c0a.css",
+    "static/js/main.1226cd45.js"
   ]
 }
