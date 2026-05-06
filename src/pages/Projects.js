@@ -46,6 +46,7 @@ export default function Projects() {
 
       <div className="subsection">
         <h3>Personal Projects</h3>
+        <p className="section-note">these projects are still in the beginning phases — (started 05/2026). <br></br> Progress will be updated as the projects move along.</p>
         <div className="projects-grid">
           {personalProjects.map(p => (
             <ProjectCard key={p.id} project={p} />
