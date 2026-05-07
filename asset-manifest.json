@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/nati-mekuria/static/css/main.7b61db38.css",
-    "main.js": "/nati-mekuria/static/js/main.50cf9a7d.js",
+    "main.js": "/nati-mekuria/static/js/main.54f357a8.js",
     "static/media/dust_chamber.png": "/nati-mekuria/static/media/dust_chamber.f4306da0748fac81ba93.png",
     "static/media/contextual_awareness.png": "/nati-mekuria/static/media/contextual_awareness.a7a908536e39515151f9.png",
     "static/media/secure_usb_module.png": "/nati-mekuria/static/media/secure_usb_module.025c153198f510396003.png",
@@ -11,10 +11,10 @@
     "static/media/first_touch_img.webp": "/nati-mekuria/static/media/first_touch_img.2d735208fa790bd4b2bf.webp",
     "index.html": "/nati-mekuria/index.html",
     "main.7b61db38.css.map": "/nati-mekuria/static/css/main.7b61db38.css.map",
-    "main.50cf9a7d.js.map": "/nati-mekuria/static/js/main.50cf9a7d.js.map"
+    "main.54f357a8.js.map": "/nati-mekuria/static/js/main.54f357a8.js.map"
   },
   "entrypoints": [
     "static/css/main.7b61db38.css",
-    "static/js/main.50cf9a7d.js"
+    "static/js/main.54f357a8.js"
   ]
 }
