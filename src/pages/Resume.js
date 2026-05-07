@@ -10,7 +10,8 @@ export default function Resume() {
           <a
             className="resume-btn"
             href={process.env.PUBLIC_URL + "/nati_mekuria_resume.pdf"}
-            download="Nati_Mekuria_Resume.pdf"
+            target="_blank"
+            rel="noreferrer"
           >
             Download PDF
           </a>

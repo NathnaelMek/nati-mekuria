@@ -5,7 +5,7 @@ export default function Overview() {
   return (
     <section className="section overview-section">
       <div className="overview-content">
-        <h1>Nati Mek</h1>
+        <h1>Nati Mekuria</h1>
         <p className="tagline">Hardware Engineer at Dell Technologies</p>
         <p>
           I am a curious and driven electrical engineer with a background in both hardware and software. I thrive in fast-paced environments, where being adaptable and
@@ -20,7 +20,7 @@ export default function Overview() {
           <a href="https://github.com/NathnaelMek/" target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </div>
-      <img src={headshot} alt="Nati Mek" className="headshot" />
+      <img src={headshot} alt="Nati Mekuria" className="headshot" />
     </section>
   );
 }

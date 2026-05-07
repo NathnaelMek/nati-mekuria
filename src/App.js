@@ -21,7 +21,7 @@ function App() {
     <HashRouter>
       <div className="app">
         <nav className="nav">
-          <NavLink to="/" className="nav-name">Nati Mek</NavLink>
+          <NavLink to="/" className="nav-name">Nati Mekuria</NavLink>
           <div className="nav-links">
             <NavLink to="/" end className={({ isActive }) => isActive ? "nav-active" : ""}>Overview</NavLink>
             <NavLink to="/resume" className={({ isActive }) => isActive ? "nav-active" : ""}>Resume</NavLink>
@@ -42,7 +42,7 @@ function App() {
         </main>
 
         <footer className="footer">
-          <p>Nati Mek · Hardware Engineer</p>
+          <p>Nati Mekuria · Hardware Engineer</p>
         </footer>
       </div>
     </HashRouter>
