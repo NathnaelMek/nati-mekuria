@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/nati-mekuria/static/css/main.5b26c060.css",
-    "main.js": "/nati-mekuria/static/js/main.f42898d4.js",
-    "static/media/ai_robot_rover.png": "/nati-mekuria/static/media/ai_robot_rover.0ee6fa066b84d01d113b.png",
-    "static/media/solar_mppt.png": "/nati-mekuria/static/media/solar_mppt.ad478b772d13eb77d892.png",
-    "static/media/lattepanda_carrier.png": "/nati-mekuria/static/media/lattepanda_carrier.da3245c249a0c34a148f.png",
+    "main.css": "/nati-mekuria/static/css/main.7b61db38.css",
+    "main.js": "/nati-mekuria/static/js/main.50cf9a7d.js",
+    "static/media/dust_chamber.png": "/nati-mekuria/static/media/dust_chamber.f4306da0748fac81ba93.png",
+    "static/media/contextual_awareness.png": "/nati-mekuria/static/media/contextual_awareness.a7a908536e39515151f9.png",
+    "static/media/secure_usb_module.png": "/nati-mekuria/static/media/secure_usb_module.025c153198f510396003.png",
     "static/media/smart_blinds.png": "/nati-mekuria/static/media/smart_blinds.4b6d06b25815e92a650a.png",
+    "static/media/lattepanda_carrier.png": "/nati-mekuria/static/media/lattepanda_carrier.a7a5ece0e1b673f89ff3.png",
     "static/media/headshot_linkedin.jpg": "/nati-mekuria/static/media/headshot_linkedin.e296bf3280963ba01f4a.jpg",
     "static/media/first_touch_img.webp": "/nati-mekuria/static/media/first_touch_img.2d735208fa790bd4b2bf.webp",
     "index.html": "/nati-mekuria/index.html",
-    "main.5b26c060.css.map": "/nati-mekuria/static/css/main.5b26c060.css.map",
-    "main.f42898d4.js.map": "/nati-mekuria/static/js/main.f42898d4.js.map"
+    "main.7b61db38.css.map": "/nati-mekuria/static/css/main.7b61db38.css.map",
+    "main.50cf9a7d.js.map": "/nati-mekuria/static/js/main.50cf9a7d.js.map"
   },
   "entrypoints": [
-    "static/css/main.5b26c060.css",
-    "static/js/main.f42898d4.js"
+    "static/css/main.7b61db38.css",
+    "static/js/main.50cf9a7d.js"
   ]
 }
