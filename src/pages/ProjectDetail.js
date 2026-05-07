@@ -5,7 +5,7 @@ import projects from "../data/projects.js";
 function ContentBlock({ block }) {
   switch (block.type) {
     case "paragraph":
-      return <p>{block.text}</p>;
+      return <p dangerouslySetInnerHTML={{ __html: block.text }} />;
 
     case "heading":
       return <h3 className="content-heading">{block.text}</h3>;
@@ -13,9 +13,23 @@ function ContentBlock({ block }) {
     case "list":
       return (
         <ul className="content-list">
-          {block.items.map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
+          {block.items.map((item, i) => {
+            if (typeof item === 'string') {
+              return <li key={i} dangerouslySetInnerHTML={{ __html: item }} />;
+            }
+            return (
+              <li key={i}>
+                <span dangerouslySetInnerHTML={{ __html: item.text }} />
+                {item.subItems && (
+                  <ul>
+                    {item.subItems.map((sub, j) => (
+                      <li key={j} dangerouslySetInnerHTML={{ __html: sub }} />
+                    ))}
+                  </ul>
+                )}
+              </li>
+            );
+          })}
         </ul>
       );
 
@@ -94,6 +108,9 @@ export default function ProjectDetail() {
 
       {project.image && (
         <img src={project.image} alt={project.title} className="project-detail-cover" />
+      )}
+      {project.imageDisclaimer && (
+        <p className="project-detail-disclaimer">{project.imageDisclaimer}</p>
       )}
 
       <div className="project-detail-body">

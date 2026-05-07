@@ -372,10 +372,20 @@ li {
 }
 
 .project-detail-cover {
-  width: 100%;
+  width: 50%;
+  display: block;
+  margin: 0 auto 24px;
   border-radius: 6px;
-  margin-bottom: 24px;
   border: 1px solid var(--border);
+}
+
+.project-detail-disclaimer {
+  text-align: center;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.3);
+  font-style: italic;
+  margin-top: -18px;
+  margin-bottom: 24px;
 }
 
 .project-detail-body p {

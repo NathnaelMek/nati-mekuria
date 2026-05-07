@@ -1,8 +1,9 @@
 import firstTouchImg from "../media/first_touch_img.webp";
 import lattepandaImg from "../media/lattepanda_carrier.png";
 import smartBlindsImg from "../media/smart_blinds.png";
-import aiRoverImg from "../media/ai_robot_rover.png";
-import solarMpptImg from "../media/solar_mppt.png";
+import dustChamberImg from "../media/dust_chamber.png";
+import secureUsbImg from "../media/secure_usb_module.png";
+import contextualAwarenessImg from "../media/contextual_awareness.png";
 
 const projects = [
   {
@@ -10,17 +11,14 @@ const projects = [
     title: "Secure USB Option Module",
     category: "work",
     company: "Dell Technologies",
-    image: null,
+    image: secureUsbImg,
+    imageDisclaimer: "Note: Due to confidentiality, actual images from work cannot be shared. This AI-generated image is a close approximation of the module we designed.",
     summary:
-      "A hardware security module enabling USB port control and management for enterprise Dell systems.",
+      "A hardware + firmware firewall enabling USB port control and management for enterprise Dell systems.",
     content: [
       {
         type: "paragraph",
-        text: "The Secure USB Option Module is a hardware/software solution designed to give enterprise IT administrators granular control over USB device interactions at the system level."
-      },
-      {
-        type: "paragraph",
-        text: "As a hardware engineer on this project, I was responsible for schematic capture, PCB layout, and board-level validation. The module integrates with Dell's enterprise platform architecture, enabling features such as USB port lockdown, device whitelisting, and real-time monitoring of connected peripherals."
+        text: "The Secure USB Option Module is a hardware/software solution designed to monitor USB packets at the hardware level and prevent HID attacks. It also enables enterprise IT administrators to have granular control over USB device interactions at the system level."
       },
       {
         type: "heading",
@@ -29,40 +27,48 @@ const projects = [
       {
         type: "list",
         items: [
-          "Designed the schematic and PCB layout using Cadence OrCAD and Allegro",
-          "Performed signal integrity analysis on high-speed USB data lines",
-          "Validated prototypes through functional testing and environmental stress screening",
-          "Collaborated with firmware and software teams to define the hardware-software interface",
-          "Supported the transition from prototype to mass production"
+          {
+            text: "System Architecture",
+            subItems: [
+              "block diagrams",
+              "placement study"
+            ]
+          },
+          "Part selection and vendor communication",
+          {
+            text: "Schematic capture and PCB layout using Cadence OrCAD and Allegro",
+            subItems: [
+              "6 layer board",
+              "high speed usb 2.0",
+              "45mm * 32mm board size"
+            ]
+          }
         ]
       },
       {
         type: "paragraph",
-        text: "This work resulted in two U.S. patent applications (US 20250335642 A1 and US 20250390614 A1), both currently pending."
+        text: "This work resulted in two U.S. patent applications (<a href=\"https://patents.google.com/patent/US20250335642A1\" target=\"_blank\" rel=\"noreferrer\">US 20250335642 A1</a> and <a href=\"https://patents.google.com/patent/US20250390614A1\" target=\"_blank\" rel=\"noreferrer\">US 20250390614 A1</a>), both currently pending."
       }
     ],
     images: []
   },
   {
     id: "contextual-awareness-svt",
-    title: "Contextual Awareness Project — SVT",
+    title: "Low Power AI-enabled Contextual Awareness",
     category: "work",
     company: "Dell Technologies",
-    image: null,
+    image: contextualAwarenessImg,
+    imageDisclaimer: "Note: Due to confidentiality, actual images from work cannot be shared. This AI-generated image is a close approximation of the system we validated.",
     summary:
-      "System validation testing for Dell's contextual awareness platform, covering hardware-software integration.",
+      "Enable low power contextual awareness using multiple sensors (capacitive proximity, UWB Radar, charge domain image sensor etc. ), AI/ML algorithms, and enable new usecases",
     content: [
       {
         type: "paragraph",
-        text: "The Contextual Awareness project leverages a combination of sensors and software algorithms to enable Dell systems to intelligently respond to their environment — detecting user presence, proximity, and attention."
-      },
-      {
-        type: "paragraph",
-        text: "As part of the System Validation Testing (SVT) team, I was responsible for verifying the end-to-end functionality of the hardware-software integration across multiple system configurations."
+        text: "This Project aims to develop low-power, always-on contextual awareness capabilities for Dell systems through the integration of multiple sensing modalities and intelligent processing."
       },
       {
         type: "heading",
-        text: "Key Contributions"
+        text: "Use Cases We Validated"
       },
       {
         type: "list",
@@ -77,6 +83,49 @@ const projects = [
       {
         type: "paragraph",
         text: "The project required close collaboration across hardware, firmware, mechanical, and software teams to ensure the feature met Dell's quality and performance standards."
+      }
+    ],
+    images: []
+  },
+  {
+    id: "dust-chamber",
+    title: "Accelerated lifetime Dust Chamber",
+    category: "work",
+    company: "Dell Technologies",
+    image: dustChamberImg,
+    imageDisclaimer: "Note: Due to confidentiality, actual images from work cannot be shared. This AI-generated image is a close approximation of the dust chamber we built.",
+    summary:
+      "A custom-built dust test chamber with ESP32-controlled fan agitation and automated stress benchmarking to simulate accelerated real-world dust exposure for Dell systems deployed in India.",
+    content: [
+      {
+        type: "paragraph",
+        text: "Dell was experiencing costly product recalls in the Indian market due to dust-related hardware failures. Systems used in high-dust and high ambient temperature environments — offices during the day, homes in the evening — were accumulating particulate matter that caused thermal throttling, fan failures, and connector degradation far faster than standard test models predicted."
+      },
+      {
+        type: "paragraph",
+        text: "To address this, we designed and built a custom accelerated dust ingress test chamber in-house. The sealed acrylic enclosure fits laptops and small desktops, with two 40W fans mounted internally to circulate and suspend fine particulate. An ESP32 microcontroller manages fan speed, duty cycles, and timing profiles, communicating with the host PC over USB serial. Python and PowerShell scripts on the host orchestrate stress benchmarks on the DUT while coordinating dust exposure cycles. The test profile simulates 1 year of accelerated lifetime use in a high-dust, high-ambient-temperature environment — condensed into a single day of testing."
+      },
+      {
+        type: "heading",
+        text: "Key Contributions"
+      },
+      {
+        type: "list",
+        items: [
+          "Designed the electrical system — ESP32 firmware for fan PWM control, USB serial protocol, and safety interlocks",
+          "Developed the host-side Python automation software that synchronizes stress benchmarks (CPU, GPU, disk) with dust agitation cycles",
+          "Created configurable test profiles to replicate different real-world usage scenarios and dust densities",
+          "Collaborated with mechanical engineers on chamber design, airflow simulation, and dust media selection",
+          "Results directly informed design changes that reduced dust-related field failures and recall costs"
+        ]
+      },
+      {
+        type: "heading",
+        text: "Impact"
+      },
+      {
+        type: "paragraph",
+        text: "The chamber enabled the team to reproduce field failures in-lab for the first time, identify vulnerable components, and validate mitigation strategies — all before committing to production changes. This significantly reduced the cost of recalls and improved product reliability for the Indian market."
       }
     ],
     images: []
@@ -273,137 +322,6 @@ const projects = [
     ],
     images: []
   },
-  {
-    id: "ai-nav-rover",
-    title: "AI Navigation Rover — Autonomous Robot Platform",
-    category: "personal",
-    image: aiRoverImg,
-    summary:
-      "An autonomous 4WD rover with onboard AI vision, LiDAR mapping, and a custom motor controller PCB — combining hardware and ML for real-time navigation.",
-    content: [
-      {
-        type: "paragraph",
-        text: "This project combines hardware engineering and AI/ML to build a small autonomous rover capable of navigating indoor environments using computer vision and LiDAR. The rover features a custom-designed motor controller and power distribution PCB, demonstrating end-to-end hardware-software integration."
-      },
-      {
-        type: "paragraph",
-        text: "The goal is to create a platform that can autonomously map a room, avoid obstacles, and navigate to target waypoints — all powered by onboard compute with no cloud dependency."
-      },
-      {
-        type: "heading",
-        text: "System Architecture"
-      },
-      {
-        type: "table",
-        headers: ["Subsystem", "Component", "Details"],
-        rows: [
-          ["Compute", "NVIDIA Jetson Orin Nano", "8GB RAM, GPU-accelerated inference for real-time vision"],
-          ["Vision", "OAK-D Lite (Stereo + RGB)", "Depth perception + object detection via onboard VPU"],
-          ["LiDAR", "RPLIDAR A1", "360° 2D scanning for SLAM-based mapping"],
-          ["Motor Control", "Custom PCB (STM32 + DRV8833)", "Dual H-bridge driver with encoder feedback and PID loops"],
-          ["Power", "Custom power distribution board", "3S LiPo (11.1V) with 5V/3.3V regulated rails, e-fuse protection"],
-          ["Chassis", "4WD aluminum frame", "Differential drive with encoder-equipped DC gear motors"],
-          ["Communication", "Wi-Fi + ROS 2", "Telemetry, remote monitoring dashboard, and OTA command interface"]
-        ]
-      },
-      {
-        type: "heading",
-        text: "Execution Plan"
-      },
-      {
-        type: "list",
-        items: [
-          "Phase 1 — Motor controller PCB: design in KiCad with STM32G4 MCU, DRV8833 dual H-bridge, and quadrature encoder inputs",
-          "Phase 2 — Power distribution board: 3S LiPo input, voltage regulators (5V @ 5A for Jetson, 3.3V for peripherals), battery monitoring via INA219",
-          "Phase 3 — Chassis assembly and wiring: motors, encoders, LiDAR, camera, and Jetson mounted on aluminum platform",
-          "Phase 4 — Firmware: STM32 motor control with PID speed regulation, communicating with Jetson over UART/CAN",
-          "Phase 5 — AI software stack: ROS 2 for sensor fusion, SLAM (using LiDAR + odometry), and path planning with Nav2",
-          "Phase 6 — Object detection: deploy YOLOv8 on Jetson for real-time obstacle classification and avoidance"
-        ]
-      },
-      {
-        type: "heading",
-        text: "Skills Demonstrated"
-      },
-      {
-        type: "list",
-        items: [
-          "Custom PCB design — schematic capture, layout, and fabrication of motor controller and power boards",
-          "Embedded firmware — real-time motor control on STM32 with PID tuning",
-          "AI/ML — deploying neural networks on edge hardware (Jetson) for vision-based navigation",
-          "Systems integration — coordinating mechanical, electrical, and software subsystems into a working platform",
-          "Power systems — battery management, multi-rail power distribution, and protection circuits"
-        ]
-      }
-    ],
-    images: []
-  },
-  {
-    id: "solar-mppt-charger",
-    title: "Solar MPPT Charge Controller",
-    category: "personal",
-    image: solarMpptImg,
-    summary:
-      "A custom-designed Maximum Power Point Tracking (MPPT) solar charge controller PCB for off-grid LiFePO4 battery systems.",
-    content: [
-      {
-        type: "paragraph",
-        text: "This project is a ground-up design of a solar charge controller with Maximum Power Point Tracking (MPPT) — the most efficient method of harvesting energy from photovoltaic panels. Unlike simple PWM controllers, MPPT dynamically adjusts the operating voltage of the solar panel to extract maximum power under varying sunlight conditions."
-      },
-      {
-        type: "paragraph",
-        text: "The controller is designed for 12V–24V solar panel inputs and charges a 12.8V LiFePO4 battery pack, targeting off-grid and portable power applications. The entire design — power stage, control loop, and monitoring firmware — is built from scratch."
-      },
-      {
-        type: "heading",
-        text: "System Architecture"
-      },
-      {
-        type: "table",
-        headers: ["Block", "Component", "Details"],
-        rows: [
-          ["Power Stage", "Synchronous buck converter", "High-side + low-side MOSFETs (CSD19536) with bootstrap gate drive"],
-          ["Inductor", "Coilcraft XAL7030", "22µH shielded power inductor rated for 7A saturation"],
-          ["Controller", "STM32G4", "Arm Cortex-M4F with hardware ADC + comparator for analog control loop"],
-          ["Current Sensing", "INA228", "High-side current/power monitor with 20-bit ADC for precise MPPT tracking"],
-          ["Gate Driver", "UCC27211A", "Half-bridge driver with adaptive dead-time for synchronous rectification"],
-          ["Battery Protection", "BQ76920", "3–5 cell BMS IC with overvoltage, undervoltage, and overcurrent protection"],
-          ["Display", "0.96\" OLED (SSD1306)", "Real-time display of voltage, current, power, and battery SOC"],
-          ["Communication", "USB-C + UART", "Data logging interface and firmware update port"]
-        ]
-      },
-      {
-        type: "heading",
-        text: "Execution Plan"
-      },
-      {
-        type: "list",
-        items: [
-          "Phase 1 — Power stage simulation in LTspice: verify buck converter efficiency, loop stability (bode plot), and transient response",
-          "Phase 2 — Schematic capture in Altium Designer: power stage, gate drivers, current sensing, MCU, and connectors",
-          "Phase 3 — 4-layer PCB layout with dedicated power and ground planes, optimized for thermal dissipation and low-noise analog sensing",
-          "Phase 4 — Fabrication and assembly: order boards from JLCPCB, reflow solder power components, hand-solder fine-pitch ICs",
-          "Phase 5 — Firmware: implement Perturb & Observe MPPT algorithm, battery charging profiles (CC/CV), and OLED dashboard",
-          "Phase 6 — Testing: validate efficiency across load conditions, verify MPPT tracking accuracy with variable light source, thermal stress test"
-        ]
-      },
-      {
-        type: "heading",
-        text: "Skills Demonstrated"
-      },
-      {
-        type: "list",
-        items: [
-          "Power electronics design — high-efficiency switching converter with synchronous rectification",
-          "Analog/mixed-signal design — precision current/voltage sensing and control loop compensation",
-          "PCB layout for power — thermal management, minimized switching loops, and proper ground plane strategy",
-          "Embedded systems — real-time MPPT algorithm and battery management firmware on STM32",
-          "Simulation — LTspice modeling of power stage behavior before committing to hardware"
-        ]
-      }
-    ],
-    images: []
-  }
 ];
 
 export default projects;
