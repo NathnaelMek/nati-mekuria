@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.7b61db38.css",
-    "main.js": "/portfolio/static/js/main.b9584fdb.js",
+    "main.css": "/portfolio/static/css/main.be11cd2b.css",
+    "main.js": "/portfolio/static/js/main.e60c7cfb.js",
     "static/media/dust_chamber.png": "/portfolio/static/media/dust_chamber.f4306da0748fac81ba93.png",
     "static/media/contextual_awareness.png": "/portfolio/static/media/contextual_awareness.a7a908536e39515151f9.png",
     "static/media/secure_usb_module.png": "/portfolio/static/media/secure_usb_module.025c153198f510396003.png",
     "static/media/smart_blinds.png": "/portfolio/static/media/smart_blinds.4b6d06b25815e92a650a.png",
     "static/media/lattepanda_carrier.png": "/portfolio/static/media/lattepanda_carrier.a7a5ece0e1b673f89ff3.png",
     "static/media/headshot_linkedin.jpg": "/portfolio/static/media/headshot_linkedin.e296bf3280963ba01f4a.jpg",
+    "static/media/contextual_engine_arch.png": "/portfolio/static/media/contextual_engine_arch.c0cf87c45407e8de2082.png",
     "static/media/first_touch_img.webp": "/portfolio/static/media/first_touch_img.2d735208fa790bd4b2bf.webp",
     "index.html": "/portfolio/index.html",
-    "main.7b61db38.css.map": "/portfolio/static/css/main.7b61db38.css.map",
-    "main.b9584fdb.js.map": "/portfolio/static/js/main.b9584fdb.js.map"
+    "main.be11cd2b.css.map": "/portfolio/static/css/main.be11cd2b.css.map",
+    "main.e60c7cfb.js.map": "/portfolio/static/js/main.e60c7cfb.js.map"
   },
   "entrypoints": [
-    "static/css/main.7b61db38.css",
-    "static/js/main.b9584fdb.js"
+    "static/css/main.be11cd2b.css",
+    "static/js/main.e60c7cfb.js"
   ]
 }
