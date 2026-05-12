@@ -1,5 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
+function CollapsibleEntry({ title, date, company, defaultOpen = true, children }) {
+  const [open, setOpen] = useState(defaultOpen);
+
+  return (
+    <div className={`entry entry-collapsible${open ? " entry-open" : ""}`}>
+      <div
+        className="entry-header entry-toggle"
+        onClick={() => setOpen(!open)}
+      >
+        <div className="entry-toggle-left">
+          <span className="entry-chevron">{open ? "▼" : "▶"}</span>
+          <strong>{title}</strong>
+        </div>
+        <span className="entry-date">{date}</span>
+      </div>
+      <div className="entry-company">{company}</div>
+      <div className={`entry-collapse${open ? " entry-collapse-open" : ""}`}>
+        {children}
+      </div>
+    </div>
+  );
+}
 
 export default function Resume() {
   return (
@@ -36,12 +59,12 @@ export default function Resume() {
         <h3>Experience</h3>
 
         {/* Dell — Rotation Program */}
-        <div className="entry">
-          <div className="entry-header">
-            <strong>Hardware Engineering Rotation Program</strong>
-            <span className="entry-date">February 2023 – Present</span>
-          </div>
-          <div className="entry-company">Dell Inc., Austin, TX</div>
+        <CollapsibleEntry
+          title="Hardware Engineering Rotation Program"
+          date="February 2023 – Present"
+          company="Dell Inc., Austin, TX"
+          defaultOpen={true}
+        >
           <ul>
             <li>
               Option module complexity reduction by investigating feasibility of
@@ -128,15 +151,14 @@ export default function Resume() {
               database.
             </li>
           </ul>
-        </div>
+        </CollapsibleEntry>
 
         {/* Dell — Systems Architect Intern */}
-        <div className="entry">
-          <div className="entry-header">
-            <strong>Undergraduate Systems Architect Intern</strong>
-            <span className="entry-date">June 2022 – August 2022</span>
-          </div>
-          <div className="entry-company">Dell Inc., Austin, TX</div>
+        <CollapsibleEntry
+          title="Undergraduate Systems Architect Intern"
+          date="June 2022 – August 2022"
+          company="Dell Inc., Austin, TX"
+        >
           <ul>
             <li>
               Helped develop a standard module connector pinout, addressing
@@ -144,52 +166,49 @@ export default function Resume() {
               shielding, and connector cost tradeoffs.
             </li>
           </ul>
-        </div>
+        </CollapsibleEntry>
 
         {/* Dell — EE Intern */}
-        <div className="entry">
-          <div className="entry-header">
-            <strong>Undergraduate Electrical Engineer Intern</strong>
-            <span className="entry-date">May 2021 – August 2021</span>
-          </div>
-          <div className="entry-company">Dell Inc., Austin, TX</div>
+        <CollapsibleEntry
+          title="Undergraduate Electrical Engineer Intern"
+          date="May 2021 – August 2021"
+          company="Dell Inc., Austin, TX"
+        >
           <ul>
             <li>
               Routed an SLI bridge for the Nvidia GV100 card that would be
               utilized on a Dell Precision tower.
             </li>
           </ul>
-        </div>
+        </CollapsibleEntry>
 
         {/* Dell — BIOS Intern */}
-        <div className="entry">
-          <div className="entry-header">
-            <strong>Undergraduate BIOS Intern</strong>
-            <span className="entry-date">June 2020 – July 2020</span>
-          </div>
-          <div className="entry-company">Dell Inc., Austin, TX</div>
+        <CollapsibleEntry
+          title="Undergraduate BIOS Intern"
+          date="June 2020 – July 2020"
+          company="Dell Inc., Austin, TX"
+        >
           <ul>
             <li>
               Implemented Bluetooth 4.0 in BIOS by integrating a Bluetooth
               driver to enable Bluetooth device connection on pre-boot.
             </li>
           </ul>
-        </div>
+        </CollapsibleEntry>
 
         {/* Nokia */}
-        <div className="entry">
-          <div className="entry-header">
-            <strong>5G RAN E2E Testing and Automation Intern</strong>
-            <span className="entry-date">June 2019 – August 2019</span>
-          </div>
-          <div className="entry-company">Nokia, Irving, TX</div>
+        <CollapsibleEntry
+          title="5G RAN E2E Testing and Automation Intern"
+          date="June 2019 – August 2019"
+          company="Nokia, Irving, TX"
+        >
           <ul>
             <li>
               Built a Python GUI app to automate Excel-to-JIRA data entry,
               saving ~1.5 hours of manual work per use.
             </li>
           </ul>
-        </div>
+        </CollapsibleEntry>
       </div>
 
       {/* Patents */}

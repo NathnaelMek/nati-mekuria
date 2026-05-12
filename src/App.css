@@ -36,7 +36,7 @@ a {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 24px;
-  zoom: 1.2;
+  zoom: 1.13;
 }
 
 /* Nav */
@@ -209,6 +209,46 @@ a {
   font-size: 14px;
   color: var(--text-sub);
   margin-bottom: 8px;
+}
+
+/* Collapsible entries */
+.entry-toggle {
+  cursor: pointer;
+  user-select: none;
+  padding: 4px 0;
+}
+
+.entry-toggle:hover strong {
+  color: var(--link);
+}
+
+.entry-toggle-left {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.entry-chevron {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--text-sub);
+  transition: color 0.2s ease;
+}
+
+.entry-toggle:hover .entry-chevron {
+  color: var(--link);
+}
+
+.entry-collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.25s ease;
+  opacity: 0;
+}
+
+.entry-collapse-open {
+  max-height: 2000px;
+  opacity: 1;
 }
 
 ul {
