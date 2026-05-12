@@ -22,7 +22,7 @@ export default function Resume() {
       <div className="subsection">
         <h3>Profile</h3>
         <p>
-          Motivated electrical engineer with software and hardware experience and
+          Motivated electrical engineer with hardware and software experience and
           an understanding of PC system architecture. Quick learner who adapts
           well in fast-paced environments and works effectively with stakeholders
           to meet tight deadlines. Passionate about solving problems and eager to
@@ -44,21 +44,40 @@ export default function Resume() {
           <div className="entry-company">Dell Inc., Austin, TX</div>
           <ul>
             <li>
-              Option module complexity reduction by investigating feasibility on
-              a USB to serial conversion to remove $0.13 cost adder to
+              Option module complexity reduction by investigating feasibility of
+              a USB to serial conversion to remove $0.13 connector cost adder to
               high-volume platform (Dell Optiplex, 10M+ units/year).
             </li>
             <li>
               2 patents pending for{" "}
-              <Link to="/projects/secure-usb-module">Secure USB</Link> IP
-              (hardware-based USB traffic monitoring for customers with security
-              concerns over USB). Independently designed and developed a PCB
-              proof of concept to validate Secure USB IP (idea to gerberout).
+              <Link to="/projects/secure-usb-module">Secure USB</Link> IP, a
+              hardware-based USB traffic monitoring solution ({" "}
+              <a
+                href="https://patents.google.com/patent/US20250335642A1"
+                target="_blank"
+                rel="noreferrer"
+              >
+                US 20250335642 A1
+              </a>{" "}
+              and{" "}
+              <a
+                href="https://patents.google.com/patent/US20250390614A1"
+                target="_blank"
+                rel="noreferrer"
+              >
+                US 20250390614 A1
+              </a>
+              ).
+            </li>
+            <li>
+              Independently designed and developed a PCB proof of concept to
+              validate Secure USB IP (idea to gerberout).
             </li>
             <li>
               Traveled abroad to Mexico and Taiwan for hands-on lab training and
               factory visits to observe high-volume consumer electronics
-              manufacturing.
+              manufacturing (SMT line, progressive die stamping, injection
+              molding, etc.).
             </li>
             <li>
               Built a custom{" "}
@@ -71,9 +90,9 @@ export default function Resume() {
               <Link to="/projects/contextual-awareness-svt">
                 contextual sensing system
               </Link>{" "}
-              using an MCU with an integrated NPU and multiple sensors to run AI
-              models for detecting device context (in bag, on desk, user
-              presence, etc.).
+              using an MCU with an integrated NPU and multiple sensors to detect
+              device context (in bag, on desk, user presence, etc.) using
+              in-house lightweight ML classification models.
             </li>
             <li>
               Developed an evaluation dev kit for the sensing architecture to
@@ -81,30 +100,32 @@ export default function Resume() {
               schematic.
             </li>
             <li>
-              Worked on evaluating self-capacitance sensing technology as a human
-              touch and proximity sensor using the laptop metal housing as the
-              sensing node. Made multiple POC iterations to improve proximity
-              performance (2–3 ft detection).
+              Evaluated self-capacitance sensing technology for human touch and
+              proximity detection using the laptop metal housing as the sensing
+              node. Developed multiple POC iterations to improve proximity
+              performance, achieving 2–3 ft detection range with a floating
+              housing design.
             </li>
             <li>
               Led testing efforts to evaluate and mitigate the negative effects
-              of a floating housing, including RF desense, EMI, and ESD.
+              of a floating housing (RF desense, EMI, and ESD).
             </li>
             <li>
-              Conducting competitive analysis — automated benchmark running, data
-              collection, and reporting with scripts.
+              Conducted competitive benchmarks across 20 systems. Automated
+              benchmark running, data collection, and reporting with scripts.
             </li>
             <li>
-              Schematic capture for ARL-based notebook — responsible for HDMI, EC,
-              and DC-DC converters.
+              OrCAD schematic capture for ARL-based notebook — responsible for
+              HDMI, EC, and DC-DC converters.
             </li>
             <li>
-              Wrote an automation script for netlist comparisons. Helped save
-              time with redrawing schematics for readability.
+              Wrote a script for netlist comparisons. Helped the team save time
+              with redrawing schematics.
             </li>
             <li>
-              Leveraged AI to build a full-stack website that helps with
-              competitive analysis.
+              Leveraged AI to develop a full-stack competitive analysis platform
+              using a React frontend, Python FastAPI backend, and PostgreSQL
+              database.
             </li>
           </ul>
         </div>
@@ -164,8 +185,8 @@ export default function Resume() {
           <div className="entry-company">Nokia, Irving, TX</div>
           <ul>
             <li>
-              Built a Python GUI to automate Excel-to-JIRA data entry, saving
-              ~1.5 hours of manual work per use.
+              Built a Python GUI app to automate Excel-to-JIRA data entry,
+              saving ~1.5 hours of manual work per use.
             </li>
           </ul>
         </div>
@@ -231,19 +252,15 @@ export default function Resume() {
           </div>
           <div>
             <h4>ECAD</h4>
-            <p>Cadence (OrCAD, Allegro), KiCad</p>
+            <p>Cadence (OrCAD, Allegro), KiCad, basic TCL/SKILL scripting</p>
           </div>
           <div>
             <h4>Lab &amp; Hardware</h4>
-            <p>Basic Soldering/Rework, Lab Equipment (Oscilloscopes, etc.)</p>
+            <p>Basic Soldering/Rework, Lab Equipment</p>
           </div>
           <div>
             <h4>Programming</h4>
-            <p>Python, C/C++</p>
-          </div>
-          <div>
-            <h4>Other</h4>
-            <p>Microsoft Office</p>
+            <p>Python, C/C++, Git</p>
           </div>
         </div>
       </div>

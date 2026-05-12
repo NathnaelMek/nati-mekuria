@@ -341,6 +341,26 @@ li {
   margin-top: 4px;
 }
 
+.project-card-tbd {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.tbd-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
 /* Project detail */
 .back-btn {
   background: none;
@@ -377,6 +397,22 @@ li {
   margin: 0 auto 24px;
   border-radius: 6px;
   border: 1px solid var(--border);
+}
+
+.project-detail-cover-row {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.project-detail-cover-row img {
+  width: 0;
+  flex: 1 1 0;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  object-fit: contain;
 }
 
 .project-detail-disclaimer {

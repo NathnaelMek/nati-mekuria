@@ -4,6 +4,7 @@ import smartBlindsImg from "../media/smart_blinds.png";
 import dustChamberImg from "../media/dust_chamber.png";
 import secureUsbImg from "../media/secure_usb_module.png";
 import contextualAwarenessImg from "../media/contextual_awareness.png";
+import contextualEngineArchImg from "../media/contextual_engine_arch.png";
 
 const projects = [
   {
@@ -18,11 +19,15 @@ const projects = [
     content: [
       {
         type: "paragraph",
-        text: "The Secure USB Option Module is a hardware/software solution designed to monitor USB packets at the hardware level and prevent HID attacks. It also enables enterprise IT administrators to have granular control over USB device interactions at the system level."
+        text: "The Secure USB Option Module is a hardware/software solution designed to monitor USB packets at the hardware level and prevent HID attacks. It also enables enterprise IT administrators to have granular control over USB device interactions at the system level. "
+      },
+      {
+        type: "paragraph",
+        text: "It was designed to fit into <a href='https://www.dell.com/en-us/shop/desktops-all-in-one-computers/optiplex-desktops/family/products' target='_blank' rel='noreferrer'>Dell Optiplex</a> desktop platforms using Dell's propriety Option-module architecture."
       },
       {
         type: "heading",
-        text: "Key Contributions"
+        text: "Independently designed and developed a PCB POC to validate (idea to gerberout)."
       },
       {
         type: "list",
@@ -31,10 +36,11 @@ const projects = [
             text: "System Architecture",
             subItems: [
               "block diagrams",
-              "placement study"
+              "placement study",
+              "Part selection and vendor communication"
             ]
           },
-          "Part selection and vendor communication",
+
           {
             text: "Schematic capture and PCB layout using Cadence OrCAD and Allegro",
             subItems: [
@@ -58,34 +64,60 @@ const projects = [
     category: "work",
     company: "Dell Technologies",
     image: contextualAwarenessImg,
+    image2: contextualEngineArchImg,
     imageDisclaimer: "Note: Due to confidentiality, actual images from work cannot be shared. This AI-generated image is a close approximation of the system we validated.",
     summary:
-      "Enable low power contextual awareness using multiple sensors (capacitive proximity, UWB Radar, charge domain image sensor etc. ), AI/ML algorithms, and enable new usecases",
+      "Enable low power contextual awareness using multiple sensors (capacitive touch, proximity, UWB Radar, charge domain image sensor etc. ), AI/ML algorithms, and enable new usecases",
     content: [
       {
         type: "paragraph",
-        text: "This Project aims to develop low-power, always-on contextual awareness capabilities for Dell systems through the integration of multiple sensing modalities and intelligent processing."
+        text: "The goal of this project was to create an independent, modular, low-power, always-on contextual awareness system for a concept notebook build by dell's SVT team, using multiple sensing modalities and intelligent processing."
       },
       {
-        type: "heading",
-        text: "Use Cases We Validated"
+        type: "paragraph",
+        text: "sensor fusion "
       },
       {
         type: "list",
         items: [
-          "Developed and executed comprehensive test plans covering sensor accuracy, power consumption, and system response times",
-          "Validated capacitive sensing hardware across varying environmental conditions (temperature, humidity, EMI)",
-          "Identified and documented hardware-level defects, working closely with design engineers to drive root cause analysis",
-          "Automated portions of the test workflow using Python scripts to improve test coverage and efficiency",
-          "Provided feedback to the design team that influenced sensor placement and shielding strategies"
+          "UWB radar, ALS, Charge domain image sensor, IMU, Capacitive sensing"
         ]
       },
       {
-        type: "paragraph",
-        text: "The project required close collaboration across hardware, firmware, mechanical, and software teams to ensure the feature met Dell's quality and performance standards."
-      }
-    ],
-    images: []
+        type: "heading",
+        text: "Capacitive proximity and touch detection"
+      },
+      {
+        type: "list",
+        items: [
+          "use a low power Cap sensing IC to evaluate using metal laptop housing as a human touch and proximity sensing node.",
+          "discuss why a floating chasssis was needed and its negative effects on ESD, EMI and RF desense, and tests that were run to validate the effects and mitigate them",
+        ]
+      },
+      {
+        type: "heading",
+        text: "Charge Domain sensor"
+      },
+      {
+        type: "list",
+        items: [
+          "talk about the uniquness of charge domain image sensing and challenges in integrating it with a laptop",
+
+        ]
+      },
+      {
+        type: "heading",
+        text: "UWB Radar sensor"
+      },
+      {
+        type: "list",
+        items: [
+          "talk about how UWB radar works and challenges with integration at the base of the laptop(RX/TX antenna dimentions and spacings etc...)",
+
+        ]
+      },
+
+    ]
   },
   {
     id: "dust-chamber",
@@ -118,14 +150,6 @@ const projects = [
           "Collaborated with mechanical engineers on chamber design, airflow simulation, and dust media selection",
           "Results directly informed design changes that reduced dust-related field failures and recall costs"
         ]
-      },
-      {
-        type: "heading",
-        text: "Impact"
-      },
-      {
-        type: "paragraph",
-        text: "The chamber enabled the team to reproduce field failures in-lab for the first time, identify vulnerable components, and validate mitigation strategies — all before committing to production changes. This significantly reduced the cost of recalls and improved product reliability for the Indian market."
       }
     ],
     images: []

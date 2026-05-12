@@ -106,8 +106,14 @@ export default function ProjectDetail() {
         <h2>{project.title}</h2>
       </div>
 
-      {project.image && (
+      {project.image && !project.image2 && (
         <img src={project.image} alt={project.title} className="project-detail-cover" />
+      )}
+      {project.image && project.image2 && (
+        <div className="project-detail-cover-row">
+          <img src={project.image} alt={project.title} />
+          <img src={project.image2} alt={`${project.title} — architecture`} />
+        </div>
       )}
       {project.imageDisclaimer && (
         <p className="project-detail-disclaimer">{project.imageDisclaimer}</p>

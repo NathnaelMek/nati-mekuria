@@ -4,9 +4,20 @@ import projects from "../data/projects.js";
 
 function ProjectCard({ project }) {
   const navigate = useNavigate();
+  const isPersonal = project.category === "personal";
+
+  const handleClick = () => {
+    if (!isPersonal) {
+      navigate(`/projects/${project.id}`);
+    }
+  };
 
   return (
-    <div className="project-card" onClick={() => navigate(`/projects/${project.id}`)}>
+    <div
+      className={`project-card${isPersonal ? " project-card-tbd" : ""}`}
+      onClick={handleClick}
+      style={isPersonal ? { cursor: "default" } : {}}
+    >
       <div className="project-card-image">
         {project.image ? (
           <img src={project.image} alt={project.title} />
@@ -17,7 +28,10 @@ function ProjectCard({ project }) {
         )}
       </div>
       <div className="project-card-body">
-        <h4>{project.title}</h4>
+        <h4>
+          {project.title}
+          {isPersonal && <span className="tbd-badge">TBD</span>}
+        </h4>
         <p>{project.summary}</p>
         {project.category === "work" && project.company && (
           <p className="project-card-company">{project.company}</p>
